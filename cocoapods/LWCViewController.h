@@ -12,5 +12,6 @@
 @interface LWCViewController : UIViewController
 
 @property (nonatomic, strong) SIAlertView *alertView;
+@property (nonatomic) int kkk;
 
 @end

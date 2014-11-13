@@ -1,18 +1,18 @@
 //
-//  LWCViewController.m
+//  NextViewController.m
 //  cocoapods
 //
-//  Created by 李伟超 on 14-11-6.
+//  Created by 李伟超 on 14-11-13.
 //  Copyright (c) 2014年 LWC. All rights reserved.
 //
 
-#import "LWCViewController.h"
+#import "NextViewController.h"
 
-@interface LWCViewController ()
+@interface NextViewController ()
 
 @end
 
-@implementation LWCViewController
+@implementation NextViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,24 +27,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)loadView {
+    [super loadView];
     
-    _alertView = [[SIAlertView alloc] initWithTitle:@"SIAlertView" andMessage:@"yeah"];
-    _alertView.frame = CGRectMake(40, 100, 240, 100);
-    _alertView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_alertView];
-    
-    [_alertView show];
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"%@",_str);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)loadView {
-    [super loadView];
-    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 /*
