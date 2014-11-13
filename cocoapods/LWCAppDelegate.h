@@ -12,6 +12,7 @@
 @interface LWCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navCon;
 @property (strong, nonatomic) LWCViewController *ViewController;
 
 @end
