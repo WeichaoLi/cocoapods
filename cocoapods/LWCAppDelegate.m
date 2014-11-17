@@ -6,15 +6,33 @@
 //  Copyright (c) 2014年 LWC. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "LWCAppDelegate.h"
 #import "LWCViewController.h"
+#import "iOSHierarchyViewer.h"
 
 @implementation LWCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [iOSHierarchyViewer start];
+    
+    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_managedObjectModel];
+    NSURL *storeUrl = [NSURL fileURLWithPath:[NSHomeDirectory() stringByAppendingPathComponent:@"Documents/database.sqlite"]];
+    [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:nil];
+    
+    _managedObjectContext = [[NSManagedObjectContext alloc] init];
+    [_managedObjectContext setPersistentStoreCoordinator:_persistentStoreCoordinator];
+    
+    [iOSHierarchyViewer addContext:_managedObjectContext name:@"Root context"];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
     self.ViewController = [[LWCViewController alloc] init];
     self.navCon = [[UINavigationController alloc] initWithRootViewController:self.ViewController];
     self.window.rootViewController = self.navCon;

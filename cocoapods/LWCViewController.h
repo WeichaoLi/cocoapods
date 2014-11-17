@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SIAlertView.h"
+#import "SVProgressHUD.h"
 
 @interface LWCViewController : UIViewController
 
 @property (nonatomic, strong) SIAlertView *alertView;
-@property (nonatomic) int kkk;
+@property (nonatomic, strong) SVProgressHUD *HUD;
 
 @end

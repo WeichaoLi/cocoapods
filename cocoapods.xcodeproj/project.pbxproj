@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B4C91F21A16197400F70EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4C91F11A16197400F70EAB /* CoreData.framework */; };
+		1B4C91F41A1619A700F70EAB /* libiOSHierarchyViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4C91F31A1619A700F70EAB /* libiOSHierarchyViewer.a */; };
 		1B9F2A7C1A14445D003BA8BF /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F2A7B1A14445D003BA8BF /* NextViewController.m */; };
 		1BADF1961A0B52D8009F5A72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BADF1951A0B52D8009F5A72 /* Foundation.framework */; };
 		1BADF1981A0B52D8009F5A72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BADF1971A0B52D8009F5A72 /* CoreGraphics.framework */; };
@@ -25,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1B4C91F61A161AD800F70EAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B4C91BA1A16100700F70EAB /* iOSHierarchyViewer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7C861E34153DF2E000935C95;
+			remoteInfo = iOSHierarchyViewer;
+		};
 		1BADF1B21A0B52D8009F5A72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1BADF18A1A0B52D7009F5A72 /* Project object */;
@@ -35,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B4C91BA1A16100700F70EAB /* iOSHierarchyViewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSHierarchyViewer.xcodeproj; path = "iOS-Hierarchy-Viewer-master/iOSHierarchyViewer.xcodeproj"; sourceTree = "<group>"; };
+		1B4C91F11A16197400F70EAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1B4C91F31A1619A700F70EAB /* libiOSHierarchyViewer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOSHierarchyViewer.a; path = "../../../Library/Developer/Xcode/DerivedData/cocoapods-cdrpcjkxzxonarcdckbjzpoyjyys/Build/Products/Debug-iphoneos/libiOSHierarchyViewer.a"; sourceTree = "<group>"; };
 		1B9F2A7A1A14445D003BA8BF /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		1B9F2A7B1A14445D003BA8BF /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		1B9F2A7D1A144C0B003BA8BF /* Debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
@@ -66,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4C91F21A16197400F70EAB /* CoreData.framework in Frameworks */,
+				1B4C91F41A1619A700F70EAB /* libiOSHierarchyViewer.a in Frameworks */,
 				1BADF1981A0B52D8009F5A72 /* CoreGraphics.framework in Frameworks */,
 				1BADF1FD1A0B6A14009F5A72 /* libPods.a in Frameworks */,
 				1BADF19A1A0B52D8009F5A72 /* UIKit.framework in Frameworks */,
@@ -86,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B4C91BB1A16100700F70EAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B4C91F71A161AD800F70EAB /* libiOSHierarchyViewer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1BADF1891A0B52D7009F5A72 = {
 			isa = PBXGroup;
 			children = (
@@ -109,11 +131,14 @@
 		1BADF1941A0B52D8009F5A72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B4C91F11A16197400F70EAB /* CoreData.framework */,
+				1B4C91BA1A16100700F70EAB /* iOSHierarchyViewer.xcodeproj */,
 				1BADF1951A0B52D8009F5A72 /* Foundation.framework */,
 				1BADF1971A0B52D8009F5A72 /* CoreGraphics.framework */,
 				1BADF1991A0B52D8009F5A72 /* UIKit.framework */,
 				1BADF1AE1A0B52D8009F5A72 /* XCTest.framework */,
 				1BADF1FC1A0B6A14009F5A72 /* libPods.a */,
+				1B4C91F31A1619A700F70EAB /* libiOSHierarchyViewer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +257,12 @@
 			mainGroup = 1BADF1891A0B52D7009F5A72;
 			productRefGroup = 1BADF1931A0B52D8009F5A72 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1B4C91BB1A16100700F70EAB /* Products */;
+					ProjectRef = 1B4C91BA1A16100700F70EAB /* iOSHierarchyViewer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1BADF1911A0B52D7009F5A72 /* cocoapods */,
@@ -239,6 +270,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1B4C91F71A161AD800F70EAB /* libiOSHierarchyViewer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libiOSHierarchyViewer.a;
+			remoteRef = 1B4C91F61A161AD800F70EAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1BADF1901A0B52D7009F5A72 /* Resources */ = {
@@ -375,6 +416,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-OBjC";
@@ -409,6 +455,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-OBjC";
 				SDKROOT = iphoneos;
@@ -426,6 +477,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: 伟超 李 (6MX6838A23)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocoapods/cocoapods-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/ISDiskCache\"",
+					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SIAlertView\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy",
+				);
 				INFOPLIST_FILE = "cocoapods/cocoapods-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -446,6 +508,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: 伟超 李 (6MX6838A23)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocoapods/cocoapods-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/ISDiskCache\"",
+					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SIAlertView\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy",
+				);
 				INFOPLIST_FILE = "cocoapods/cocoapods-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -462,7 +535,6 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -482,7 +554,6 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

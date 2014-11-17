@@ -8,6 +8,7 @@
 
 #import "LWCViewController.h"
 #import "NextViewController.h"
+#import "SVProgressHUD.h"
 
 @interface LWCViewController ()
 
@@ -58,8 +59,8 @@
     [super loadView];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 120, 40)];
-    button1.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 120, 40)];
+    button1.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
     [button1 setTitle:@"SIAlertView" forState:UIControlStateNormal];
     [button1 setBackgroundColor:[UIColor lightGrayColor]];
     [button1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -68,8 +69,8 @@
     [button1 addTarget:self action:@selector(showCustomAlertView:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
     
-    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 300, 120, 40)];
-    button2.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 450, 120, 40)];
+    button2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin;
     [button2 setTitle:@"UIAlertView" forState:UIControlStateNormal];
     [button2 setBackgroundColor:[UIColor grayColor]];
     [button2 setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
@@ -86,6 +87,8 @@
 
 
 #pragma mark - buttom Action
+
+id observer;
 
 - (void) showCustomAlertView:(id)sender {
     if (_alertView == nil) {
@@ -108,35 +111,39 @@
         [_alertView addButtonWithTitle:@"确定"
                                  type:SIAlertViewButtonTypeDestructive
                               handler:^(SIAlertView *alertView) {
+//                                  debug_NSLog(@"click");
                                   [controller alertView:nil clickedButtonAtIndex:1];
                               }];
         
         
         _alertView.willShowHandler = ^(SIAlertView *alertView) {
-//            debug_NSLog(@"1");
         };
         _alertView.didShowHandler = ^(SIAlertView *alertView) {
-//            debug_NSLog(@"2");
         };
         _alertView.willDismissHandler = ^(SIAlertView *alertView) {
-//            debug_NSLog(@"3");
         };
         _alertView.didDismissHandler = ^(SIAlertView *alertView) {
-//            debug_NSLog(@"4");
         };
+        
+        observer = [[NSNotificationCenter defaultCenter] addObserverForName:SIAlertViewDidDismissNotification object:_alertView queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+//            [_alertView show];
+        }];
         
         _alertView.cornerRadius = 10;
         _alertView.buttonFont = [UIFont boldSystemFontOfSize:19];
+        
     }
     [_alertView show];
 }
 
 - (void)showSystemAlertView:(id)sender {
-    if (alert == nil) {
-        alert = [[UIAlertView alloc] initWithTitle:nil message:@"页面跳转" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    }
+//    if (alert == nil) {
+//        alert = [[UIAlertView alloc] initWithTitle:nil message:@"页面跳转" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//    }
+//    
+//    [alert show];
     
-    [alert show];
+    [SVProgressHUD showErrorWithStatus:@"error"];
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -146,7 +153,6 @@
         if (_nextVC == nil) {
             _nextVC = [[NextViewController alloc] init];
         }
-        _nextVC.str = @"222";
         [self.navigationController pushViewController:_nextVC animated:YES];
     }
 }
@@ -155,6 +161,10 @@
 
 - (BOOL)shouldAutorotate {
     return NO;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    debug_NSLog(@"***************");
 }
 
 @end

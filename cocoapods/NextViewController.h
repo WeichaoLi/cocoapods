@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NextViewController : UIViewController
+@interface NextViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSString *str;
+@property (nonatomic, strong) UITableView *myTableView;
 
 @end

@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 @class LWCViewController;
 
-@interface LWCAppDelegate : UIResponder <UIApplicationDelegate>
+@interface LWCAppDelegate : UIResponder <UIApplicationDelegate> {
+    NSManagedObjectModel*_managedObjectModel;
+    NSPersistentStoreCoordinator*_persistentStoreCoordinator;
+    NSManagedObjectContext*_managedObjectContext;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navCon;

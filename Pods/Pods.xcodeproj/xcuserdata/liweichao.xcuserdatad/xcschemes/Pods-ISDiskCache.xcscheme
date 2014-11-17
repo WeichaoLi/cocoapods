@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68B4EA2719053BCE1B09B426"
+               BlueprintIdentifier = "FCAB5A011CAA410CA391898B"
                BuildableName = "libPods-ISDiskCache.a"
                BlueprintName = "Pods-ISDiskCache"
                ReferencedContainer = "container:Pods.xcodeproj">
