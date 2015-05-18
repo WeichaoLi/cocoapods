@@ -106,8 +106,9 @@ id observer;
                                   //在这写点击该按钮 执行的事件
                               }];
         
-        //这里存在循环引用，所以self要加上 __block
-        __block LWCViewController *controller = self;
+        //这里存在循环引用，所以self要加上 __block 或 __weak
+//        __weak LWCViewController *controller = self;
+        LWCViewController *controller = self;
         [_alertView addButtonWithTitle:@"确定"
                                  type:SIAlertViewButtonTypeDestructive
                               handler:^(SIAlertView *alertView) {

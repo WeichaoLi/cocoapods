@@ -24,6 +24,7 @@
 		1BADF1BB1A0B52D8009F5A72 /* cocoapodsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BADF1BA1A0B52D8009F5A72 /* cocoapodsTests.m */; };
 		1BADF1C61A0B53B8009F5A72 /* LWCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BADF1C51A0B53B8009F5A72 /* LWCViewController.m */; };
 		1BADF1FD1A0B6A14009F5A72 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BADF1FC1A0B6A14009F5A72 /* libPods.a */; };
+		1BCFD58A1A2701CC00DDDCBB /* LWCNNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCFD5891A2701CC00DDDCBB /* LWCNNViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1BADF1911A0B52D7009F5A72;
 			remoteInfo = cocoapods;
+		};
+		1BC9F8891A7730C1007A6B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B4C91BA1A16100700F70EAB /* iOSHierarchyViewer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C861E33153DF2E000935C95;
+			remoteInfo = iOSHierarchyViewer;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -69,6 +77,8 @@
 		1BADF1C41A0B53B8009F5A72 /* LWCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCViewController.h; sourceTree = "<group>"; };
 		1BADF1C51A0B53B8009F5A72 /* LWCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCViewController.m; sourceTree = "<group>"; };
 		1BADF1FC1A0B6A14009F5A72 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "../../../Library/Developer/Xcode/DerivedData/cocoapods-cdrpcjkxzxonarcdckbjzpoyjyys/Build/Products/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		1BCFD5881A2701CC00DDDCBB /* LWCNNViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCNNViewController.h; sourceTree = "<group>"; };
+		1BCFD5891A2701CC00DDDCBB /* LWCNNViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCNNViewController.m; sourceTree = "<group>"; };
 		D0AF7C552BDD3130F7D878E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DF483B1EBD49BC3288BAFA97 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +162,8 @@
 				1BADF1C51A0B53B8009F5A72 /* LWCViewController.m */,
 				1B9F2A7A1A14445D003BA8BF /* NextViewController.h */,
 				1B9F2A7B1A14445D003BA8BF /* NextViewController.m */,
+				1BCFD5881A2701CC00DDDCBB /* LWCNNViewController.h */,
+				1BCFD5891A2701CC00DDDCBB /* LWCNNViewController.m */,
 				1BADF1A71A0B52D8009F5A72 /* Images.xcassets */,
 				1BADF19C1A0B52D8009F5A72 /* Supporting Files */,
 			);
@@ -213,6 +225,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1BC9F88A1A7730C1007A6B6D /* PBXTargetDependency */,
 			);
 			name = cocoapods;
 			productName = cocoapods;
@@ -343,6 +356,7 @@
 				1B9F2A7C1A14445D003BA8BF /* NextViewController.m in Sources */,
 				1BADF1A61A0B52D8009F5A72 /* LWCAppDelegate.m in Sources */,
 				1BADF1C61A0B53B8009F5A72 /* LWCViewController.m in Sources */,
+				1BCFD58A1A2701CC00DDDCBB /* LWCNNViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +375,11 @@
 			isa = PBXTargetDependency;
 			target = 1BADF1911A0B52D7009F5A72 /* cocoapods */;
 			targetProxy = 1BADF1B21A0B52D8009F5A72 /* PBXContainerItemProxy */;
+		};
+		1BC9F88A1A7730C1007A6B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSHierarchyViewer;
+			targetProxy = 1BC9F8891A7730C1007A6B6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -425,7 +444,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-OBjC";
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}";
 			};
 			name = Debug;
 		};
@@ -463,7 +482,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-OBjC";
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -477,17 +496,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: 伟超 李 (6MX6838A23)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocoapods/cocoapods-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/ISDiskCache\"",
-					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit\"",
-					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories\"",
-					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
-					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
-					"\"${PODS_ROOT}/Headers/Public/SIAlertView\"",
-					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
-					"$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy";
 				INFOPLIST_FILE = "cocoapods/cocoapods-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -495,6 +504,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/cocoapods-cdrpcjkxzxonarcdckbjzpoyjyys/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -508,17 +518,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: 伟超 李 (6MX6838A23)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cocoapods/cocoapods-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/ISDiskCache\"",
-					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit\"",
-					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories\"",
-					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
-					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
-					"\"${PODS_ROOT}/Headers/Public/SIAlertView\"",
-					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
-					"$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy",
-				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/iOS-Hierarchy-Viewer-master/iOSViewHierarchy";
 				INFOPLIST_FILE = "cocoapods/cocoapods-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -526,6 +526,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/cocoapods-cdrpcjkxzxonarcdckbjzpoyjyys/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

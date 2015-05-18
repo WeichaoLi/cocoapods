@@ -7,8 +7,11 @@
 //
 
 #import "NextViewController.h"
+#import "LWCNNViewController.h"
 
-@interface NextViewController ()
+@interface NextViewController () {
+    LWCNNViewController *nnVC;
+}
 
 @end
 
@@ -90,21 +93,22 @@
         UIBezierPath *maskPath;
         
         if (tableView == self.myTableView) {
+
             NSUInteger lastRow = [tableView numberOfRowsInSection:indexPath.section] - 1;
             if (indexPath.row == 0) {
                 
-                 maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(15, 15)];
+                 maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerTopRight cornerRadii:CGSizeMake(5, 5)];
 
             }else if(indexPath.row == lastRow) {
                 
-                maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadii:CGSizeMake(15, 15)];
+                maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadii:CGSizeMake(5, 5)];
                 
             }else {
-                
+            
                 maskPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(0, 0)];
                 
             }
-            
+        
             CAShapeLayer *maskLayer=[[CAShapeLayer alloc] init];
             maskLayer.backgroundColor = [UIColor clearColor].CGColor;
             maskLayer.frame = rect;
@@ -129,7 +133,7 @@
     }
     
     cell.textLabel.text = @"22";
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -137,10 +141,28 @@
 #pragma mark - UITableViewDelegate
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UIView *headerview = [[UIView alloc] initWithFrame:cell.frame];
+    headerview.backgroundColor = [UIColor clearColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 40)];
+    label.backgroundColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"最新消息";
+    
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:label.bounds byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(5, 5)];
+    CAShapeLayer *maskLayer=[[CAShapeLayer alloc] init];
+    maskLayer.backgroundColor = [UIColor clearColor].CGColor;
+    maskLayer.frame = label.bounds;
+    maskLayer.path = maskPath.CGPath;
+    label.layer.mask = maskLayer;
+    
+    [headerview addSubview:label];
+    return headerview;
     return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
     if (section != 0) {
         return 0.1;
     }
@@ -158,6 +180,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.backgroundView.backgroundColor = [UIColor redColor];
+    
+    if (nnVC == nil) {
+        nnVC = [[LWCNNViewController alloc] init];
+    }
+    [self.navigationController pushViewController:nnVC animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
