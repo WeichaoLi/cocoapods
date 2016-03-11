@@ -10,29 +10,29 @@
 	<string>cocoapods</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>323D178C-DF77-470B-BF9A-26BE9379506C</key>
+		<key>0A740E9A32BFE8834F12316B3EAC90B3EE41C0C6</key>
 		<string>https://github.com/WeichaoLi/cocoapods.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>cocoapods.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>323D178C-DF77-470B-BF9A-26BE9379506C</key>
+		<key>0A740E9A32BFE8834F12316B3EAC90B3EE41C0C6</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/WeichaoLi/cocoapods.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>323D178C-DF77-470B-BF9A-26BE9379506C</string>
+	<string>0A740E9A32BFE8834F12316B3EAC90B3EE41C0C6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>323D178C-DF77-470B-BF9A-26BE9379506C</string>
+			<string>0A740E9A32BFE8834F12316B3EAC90B3EE41C0C6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>cocoapods</string>
 		</dict>
